@@ -1,12 +1,12 @@
 Lets you define family of algorithms and put each of them into separate class and make their objects interchangeable.
 
 Context class
-- strategy
-+ setStrategy()
-+ doSomething(): strategy.execute()
+\- strategy
+\+ setStrategy()
+\+ doSomething(): strategy.execute()
 
 IStrategy
-+ execute()
+\+ execute()
   
 StrategyA
 StrategyB
