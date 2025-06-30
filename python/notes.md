@@ -55,17 +55,17 @@ If assertion fails, it throws AssertionError along with the message speficied in
 ### Instance representation
 To print instance in meaningful way
 
-__repr__() returns string representation of instance. repr() calls __repr__(). It is considered "official string representation of an instance.
+\__repr__() returns string representation of instance. repr() calls \__repr__(). It is considered "official string representation of an instance.
 ```python
 def __repr__(self):
   return f"Item('{self.name}', {self.price}, {self.qty})"
 ```
 
-str() converts the input to string object. str() calls __str__(). print() by default converts its argument to string before printing.
+str() converts the input to string object. str() calls \__str__(). print() by default converts its argument to string before printing.
 ```python
 print(str(obj)) is same as print(obj)
 ```
-print() tries to find a nice way of prinitng instance. It checks for __str__() first. It it's not present then it checks for __repr__().
+print() tries to find a nice way of prinitng instance. It checks for \__str__() first. It it's not present then it checks for \__repr__().
 
 ## Class Members
 
@@ -81,7 +81,7 @@ item.pay_rate
 Class attributes can be accessed using class or object. System first checks the attribute in object and then inside class.
 Class attributes are considered $static$, there is no separate way of defining static attributes.
 
-__dict__ is a magic attribute.
+\__dict__ is a magic attribute.
 ```python
 Item.__dict__ #contains all class attributes
 item.__dict__ #contains all instance attributes
@@ -153,11 +153,11 @@ print(Item.is_integer(7.0))
 Class method / Static method can be called using instance.
 
 
-### __new__ vs __init__:
-__new__() is a static method and it takes clas name as argument "cls". 
-It gets called before __init__() during instance creation and it allocates memory for an instance. 
-Once the memory is allocated then __init__() is called which initialises the instance attributes.
-__new__() is used in design pattern like singleton where instace creation is need to be controlled.
+### \__new__ vs \__init__:
+\__new__() is a static method and it takes clas name as argument "cls". 
+It gets called before \__init__() during instance creation and it allocates memory for an instance. 
+Once the memory is allocated then \__init__() is called which initialises the instance attributes.
+\__new__() is used in design pattern like singleton where instace creation is need to be controlled.
 ```python
 class Logger(ABC):
   _logger = None
@@ -218,8 +218,10 @@ item.quantity = 5
 ```
 
 ## Access modifiers
-__ (double underscore): Private. Allowed to access only inside enclosing class.
+\__ (double underscore): Private. Allowed to access only inside enclosing class.
+
 _ (single underscore): Protected. Allowed to access only inside enclosing class and subclasses.
+
 no underscore prefix: Public. Anyone can access
 
 ```python
@@ -231,10 +233,10 @@ class Item:
 ```
 Same convention applies for methods.
 
-Python does not restrict private or protected attributes with __ or _ to be accessed outside the class.
-Using __ or _ is just Python naming convention for private or protected.
+Python does not restrict private or protected attributes with \__ or _ to be accessed outside the class.
+Using \__ or _ is just Python naming convention for private or protected.
 
-Python uses "Consenting Adults" philosophy: Assumes developer follow the convention of not accessing __ or _ attributes outside the class.
+Python uses "Consenting Adults" philosophy: Assumes developer follow the convention of not accessing \__ or _ attributes outside the class.
 
 ### Name Mangling
 
